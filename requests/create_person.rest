@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+	"name": "Roberto Mendes",
+    "number": "+55 (83) 98859-4919"
+}
