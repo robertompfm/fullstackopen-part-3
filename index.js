@@ -62,8 +62,6 @@ app.delete('/api/persons/:id', (request, response) => {
   response.status(204).end()
 })
 
-const generateId = () => Math.floor(Math.random() * 100000000 + 100000)
-
 const validatePerson = (person) => {
   if (!person.name || !person.number) {
     return "content missing"
@@ -93,8 +91,6 @@ app.post('/api/persons', (request, response) => {
     name: body.name,
     number: body.number
   })
-
-  console.log({person})
 
   person.save().then(savedPerson => {
     response.json(savedPerson)
