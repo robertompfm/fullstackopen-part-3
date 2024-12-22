@@ -10,7 +10,8 @@
     "build:ui": "rm -rf dist && cd ../fullstackopen-part-2/phonebook && npm run build && cp -r dist ../../fullstackopen-part-3",
     "deploy": "fly deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "logs:prod": "fly logs"
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
   },
   "author": "Roberto Mendes",
   "license": "ISC",
@@ -22,7 +23,11 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@flydotio/dockerfile": "^0.5.9",
+    "@stylistic/eslint-plugin-js": "^2.12.1",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "nodemon": "^3.1.4"
   }
 }
